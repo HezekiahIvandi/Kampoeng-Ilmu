@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
+const indexRoutes = require("./routes/IndexRoutes");
 const port = 3000;
 app.set("view engine", "ejs");
 
@@ -9,12 +10,7 @@ app.use(express.static("public"));
 app.use(expressLayouts);
 
 //route handling
-app.get("/", (req, res) => {
-  res.render("index.ejs", {
-    title: "Home",
-    layout: "mainLayout.ejs",
-  });
-});
+app.use(indexRoutes);
 
 //Memulai server
 app.listen(port, () => {
