@@ -93,3 +93,9 @@ body {
   width: 1.2rem;
   height: 1.2rem;
 }
+
+/* component4 styles */
+.component4 {
+  background-color: #142938;
+  font-family: var(--font-family);
+}
