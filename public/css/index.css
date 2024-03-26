@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --font-family: "Caladea", sans-serif;
-
-  --tw-background: #2b3e4c;
-  --tw-button: #ff9a01;
-  --tw-font: #142938;
-  --tw-white: #ffffff;
-  --tw-form: #3d4e64;
-  --tw-form-text: #d9ecff;
-
+  --font-family-title: "Caladea", sans-serif;
+  --font-family-text: "Poppins", sans-serif;
   /*
   --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
@@ -27,6 +20,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  color: white;
 }
 
 body {
@@ -34,13 +28,17 @@ body {
   /* background: var(--tw-background); */
 }
 
-/* component3 styles */
 .component3 {
   background-color: #142938;
 }
 
 .text-orange {
   color: #ff9a01;
+}
+
+.text-light-blue {
+  font-family: var(--font-family-text);
+  color: #b0b0d1;
 }
 
 .pad-md {
@@ -66,4 +64,18 @@ body {
 .bg-arrow {
   background-color: #2b3e4c;
   border-radius: 2px;
+}
+
+.circle-buttons button {
+  background-color: #2b3e4c;
+  border: none;
+}
+.circle-buttons img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.star-container img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
