@@ -3,6 +3,13 @@
 :root {
   --font-family-title: "Caladea", sans-serif;
   --font-family-text: "Poppins", sans-serif;
+
+  --tw-background: #2b3e4c;
+  --tw-button: #ff9a01;
+  --tw-font: #142938;
+  --tw-white: #ffffff;
+  --tw-form: #3d4e64;
+  --tw-form-text: #d9ecff;
   /*
   --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
