@@ -1,100 +1,22 @@
-<div class="navbar bg-[var(--tw-font)]">
-  <div class="navbar-start ml-20">
-    <p class="text-4xl font-bold text-[var(--tw-white)]"><span class="text-[var(--tw-button)]">KELAS</span> POPULER</p>
-  </div>
-  <div class="navbar-end mr-40">
-    <div role="tablist" class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge">
-      <a role="tab" class="tab tab-active px-3 rounded-badge bg-[var(--tw-button)]">Android</a>
-      <a role="tab" class="tab">Machine Learning</a>
-      <a role="tab" class="tab">Data Scientist</a>
-      <a role="tab" class="tab">Front-End Web</a>
-      <a role="tab" class="tab">Back-End</a>
-    </div>
-  </div>
-</div>
+<!-- ./views/layouts/component2.ejs -->
 
-<!-- start CARDS -->
-<div class="card-container flex flex-wrap justify-between mt-10 mx-40">
-  <!-- card wrapper #1 -->
-  <div class="card-wrapper">
-    <!-- Card #1 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+<div class="bg-[var(--tw-font)]" style="">
+  <div class="navbar bg-[var(--tw-font)]">
+    <div class="navbar-start ml-20">
+      <p class="text-4xl font-bold text-[var(--tw-white)]"><span class="text-[var(--tw-button)]">KELAS</span> POPULER</p>
+    </div>
+    <div class="navbar-end mr-40">
+      <div role="tablist" class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge tab-bg-yellow" id="tablist">
+        <a role="tab" class="tab" data-tab="android">Android</a>
+        <a role="tab" class="tab" data-tab="machine-learning">Machine Learning</a>
+        <a role="tab" class="tab" data-tab="data-scientist">Data Scientist</a>
+        <a role="tab" class="tab" data-tab="frontend-web">Front-End Web</a>
+        <a role="tab" class="tab" data-tab="backend">Back-End</a>
       </div>
     </div>
-    <!-- end of Card #1 -->
-    <!-- Card #2 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <!-- end of Card #2 -->
-    <!-- Card #3 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <!-- end of Card #3 -->
   </div>
-  <!-- end of card wrapper #1 -->
 
-  <!-- card wrapper #2 -->
-  <div class="card-wrapper">
-    <!-- Card #4 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <!-- end of Card #4 -->
-    <!-- Card #5 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <!-- end of Card #5 -->
-    <!-- Card #6 -->
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <!-- end of Card #6 -->
-  </div>
-  <!-- end of card wrapper #2 -->
+  <!-- start CARDS -->
+  <div class="card-container grid grid-cols-3 gap-4 mt-10 mx-40"><%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %></div>
+  <!-- end of CARDS -->
 </div>
-<!-- end of CARDS -->
