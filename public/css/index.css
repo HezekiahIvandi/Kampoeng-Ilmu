@@ -99,3 +99,15 @@ body {
   background-color: #142938;
   font-family: var(--font-family);
 }
+
+/* footer styles */
+
+.footer {
+  background-color: #2b3e4c;
+  font-family: var(--font-family);
+}
+
+.footer li {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
