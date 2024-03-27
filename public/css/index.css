@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --font-family-title: "Caladea", sans-serif;
+  --font-family-title: "Caladea", "Poppins";
   --font-family-text: "Poppins", sans-serif;
 
   --tw-background: #2b3e4c;
@@ -35,9 +35,22 @@ body {
   /* background: var(--tw-background); */
 }
 
+.caladea {
+  font-family: var(--font-family-title);
+}
+
+.poppins {
+  font-family: var(--font-family-text);
+}
+/* styles component3 */
+
 .component3 {
   background-color: #142938;
-  font-family: var(--font-family);
+  font-family: var(--font-family-title);
+}
+
+.component3 h2 {
+  font-family: var(--font-family-title);
 }
 
 .text-orange {
@@ -54,14 +67,11 @@ body {
 }
 .alur-buttons {
   display: grid;
-  grid-template-columns: repeat(
-    4,
-    1fr
-  ); /* Two columns each taking equal space */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns each taking equal space */
   grid-template-rows: repeat(
     2,
     auto
-  ); /* Four rows, each sized automatically based on content */
+  ); /* 2 rows, each sized automatically based on content */
   gap: 13px; /* Gap between grid items */
 }
 .alur-buttons button {
@@ -92,4 +102,32 @@ body {
 .star-container img {
   width: 1.2rem;
   height: 1.2rem;
+}
+
+/* component4 styles */
+.component4 {
+  background-color: #142938;
+  font-family: var(--font-family-title);
+}
+.component4 h2 {
+  font-family: var(--font-family-title);
+}
+
+.component4 p {
+  font-family: var(--font-family-text);
+}
+.carousel {
+  border: 1px solid white;
+}
+
+/* footer styles */
+
+.footer {
+  background-color: #2b3e4c;
+  font-family: var(--font-family);
+}
+
+.footer li {
+  margin-top: 0.5rem;
+  cursor: pointer;
 }
