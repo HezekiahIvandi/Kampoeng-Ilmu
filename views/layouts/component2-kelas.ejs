@@ -1,0 +1,28 @@
+<div class="bg-[var(--tw-font)] relative">
+  <div class="navbar mb-20 w-full">
+    <div class="navbar-start"></div>
+    <div class="navbar-center">
+      <div role="tablist" class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge" id="tablist">
+        <a role="tab" class="tab [--tab-bg:yellow] [--tab-border-color:orange]" data-tab="android">Android</a>
+        <a role="tab" class="tab" data-tab="machine-learning">Machine Learning</a>
+        <a role="tab" class="tab" data-tab="data-scientist">Data Scientist</a>
+        <a role="tab" class="tab" data-tab="frontend-web">Front-End Web</a>
+        <a role="tab" class="tab" data-tab="backend">Back-End</a>
+        <a role="tab" class="tab" data-tab="data-analyst">Data Analyst</a>
+        <a role="tab" class="tab" data-tab="data-engineer">Data Engineer</a>
+        <a role="tab" class="tab" data-tab="ios-developer">IOS Developer</a>
+        <a role="tab" class="tab" data-tab="statistician">Statistician</a>
+      </div>
+    </div>
+    <div class="navbar-end"></div>
+  </div>
+
+  <div class="mb-28">
+    <!-- start CARDS -->
+    <div class="card-container grid grid-cols-3 gap-4 mt-10 mx-40">
+      <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %><%- include('card.ejs') %> <%- include('card.ejs') %> <%-
+      include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %>
+    </div>
+    <!-- end of CARDS -->
+  </div>
+</div>
