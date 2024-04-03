@@ -68,7 +68,10 @@ body {
 .alur-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns each taking equal space */
-  grid-template-rows: repeat(2, auto); /* 2 rows, each sized automatically based on content */
+  grid-template-rows: repeat(
+    2,
+    auto
+  ); /* 2 rows, each sized automatically based on content */
   gap: 13px; /* Gap between grid items */
 }
 .alur-buttons button {
@@ -127,4 +130,18 @@ body {
 .footer li {
   margin-top: 0.5rem;
   cursor: pointer;
+}
+
+/* daftar styles */
+.daftar-container {
+  background-image: url("../assets/Daftar-bg.png"); /* Replace 'your-image-url.jpg' with the URL of your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rk-container {
+  background-image: url("../assets/RuangKelas.png"); /* Replace 'your-image-url.jpg' with the URL of your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
