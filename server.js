@@ -5,6 +5,7 @@ const indexRoutes = require("./routes/IndexRoutes");
 const daftarRoutes = require("./routes/daftarRoutes");
 const kelasRoutes = require("./routes/kelasRoutes");
 const alurRoutes = require("./routes/alurRoutes");
+const tentangRoutes = require("./routes/tentangRoutes");
 const port = 3000;
 app.set("view engine", "ejs");
 
@@ -17,6 +18,7 @@ app.use(indexRoutes);
 app.use(daftarRoutes);
 app.use(kelasRoutes);
 app.use(alurRoutes);
+app.use(tentangRoutes);
 
 //Memulai server
 app.listen(port, () => {

@@ -42,6 +42,13 @@ body {
 .poppins {
   font-family: var(--font-family-text);
 }
+
+.centered-div {
+  position: absolute; /* Position the div absolutely */
+  top: 50%; /* Move the div down by 50% of the container's height */
+  left: 50%; /* Move the div right by 50% of the container's width */
+  transform: translate(-50%, -50%); /* Adjust to center the div exactly */
+}
 /* styles component3 */
 
 .component3 {
@@ -144,4 +151,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* styles for tentang-kami */
+.text-field-ttg {
 }

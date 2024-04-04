@@ -1,0 +1,91 @@
+<div class="pt-[5rem] px-[1rem]">
+  <div>
+    <div class="flex">
+      <div class="w-[40%] px-[3rem] pt-[10rem]">
+        <h1 class="text-[2.5em] font-bold">Tentang Kami</h1>
+        <p class="text-[25px] text-[#B0B0D1]">
+          Kampoeng Ilmu adalah sebuah platform pembelajaran daring yang
+          bertujuan untuk memberikan akses kepada masyarakat untuk belajar
+          berbagai keterampilan teknologi informasi, terutama dalam bidang
+          pemrograman komputer.
+        </p>
+      </div>
+      <img class="w-[60%] pt-[3rem]" src="assets/Tentang-kami-2.png" alt="" />
+    </div>
+    <div class="flex">
+      <img class="w-[50%] pt-[3rem]" src="assets/Tentang-kami-1.png" alt="" />
+
+      <div class="w-[50%] px-[3rem] pt-[10rem]">
+        <h1 class="text-[2.5em] font-bold">Mengapa memilih kami?</h1>
+        <p class="text-[25px] text-[#B0B0D1]">
+          Kampoeng Ilmu menawarkan materi pembelajaran berkualitas tinggi dalam
+          berbagai bahasa pemrograman dan topik terkait lainnya. Materi tersebut
+          disusun dengan baik dan disajikan secara sistematis, memudahkan pemula
+          untuk memahami konsep-konsep yang kompleks.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="w-full pt-[4rem] h-full relative">
+    <div class="w-full">
+      <img src="assets/Tentang-kami-3.png" alt="" class />
+    </div>
+    <div class="w-full h-[355px]"></div>
+
+    <form id="contact-us" class="bg-[#2B3E4C] centered-div rounded-md p-[3rem]">
+      <div class="flex flex-col rounded-lg p-[3rem]">
+        <div class="flex justify-center mb-[2rem]">
+          <div class="flex justify-center flex-col">
+            <h2 class="text-[1.5em] font-bold">Hubungi Kami</h2>
+            <div class="w-[5rem] h-[0.5rem] bg-[#FF9A01] mt-[0.7rem]"></div>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="mt-[1.5rem] flex flex-col">
+            <label for="name" class="text-[#A5A5A5] text-[11px]">Nama</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="text-field-ttg w-[20rem] bg-transparent border-b border-[#A5A5A5] focus:outline-none focus:border-[#A5A5A5]"
+              placeholder="Type your name here..."
+            />
+          </div>
+          <div class="mt-[1.5rem] flex flex-col ml-[4rem]">
+            <label for="email" class="text-[#A5A5A5] text-[11px]">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="text-field-ttg w-[20rem] bg-transparent border-b border-[#A5A5A5] focus:outline-none focus:border-[#A5A5A5]"
+              placeholder="Type your email here..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="inline px-[5rem]">
+        <div class="mt-[1.5rem] flex flex-col w-full justify-center ml-[3rem]">
+          <label for="message" class="text-[#A5A5A5] text-[11px] w-full"
+            >Pesan</label
+          >
+          <input
+            type="text"
+            id="message"
+            name="message"
+            class="text-field-ttg w-[44rem] bg-transparent border-b border-[#A5A5A5] focus:outline-none focus:border-[#A5A5A5]"
+            placeholder="Type your message here..."
+          />
+        </div>
+      </div>
+      <div class="flex justify-center mt-[3rem]">
+        <button
+          type="submit"
+          class="bg-[#FF9A01] px-[2rem] py-[0.5rem] text-[#2B3E4C] rounded-sm w-[8rem] font-bold text-[1.2em] hover:bg-[#2B3E4C] hover:text-[#FF9A01] ease-in-out"
+        >
+          Kirim
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('layouts/footer') %>
