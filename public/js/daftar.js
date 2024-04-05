@@ -3,6 +3,8 @@ const passwordInput = document.getElementById("password");
 const passwordStrengthMessage = document.getElementById(
   "password-strength-message"
 );
+const daftarForm = document.getElementById("daftar-form");
+
 hidePassword.addEventListener("click", function () {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";

@@ -21,13 +21,13 @@ router.post(
 );
 
 router.post("/daftar/submit", async (req, res) => {
-  const { email, password } = req.body;
-
   try {
+    const { email, password } = req.body;
+    console.log(req.body);
     // Check if the username is already taken
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).send("Email already exists");
+      return res.status(400).json({ msg: "Email already exists" });
     }
 
     // Hash the password before saving it
@@ -41,10 +41,11 @@ router.post("/daftar/submit", async (req, res) => {
 
     // Save the new user to the database
     await newUser.save();
-    res.status(201).send("Admin account created successfully");
+    //res.redirect("/daftar");
+    res.status(201).json({ msg: "Admin account created successfully" });
   } catch (error) {
     console.error("Error creating admin account:", error);
-    res.status(500).send("Error creating admin account");
+    res.status(500).json({ msg: "Error creating admin account" });
   }
 });
 
