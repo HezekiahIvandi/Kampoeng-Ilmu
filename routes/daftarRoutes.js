@@ -8,14 +8,10 @@ router.get("/user/dashboard", (req, res) => {
   res.send("login succesfull!");
 });
 
-router.get("/login", (req, res) => {
-  res.send("Silahkan Login");
-});
-
 router.post(
   "/login/submit",
   passport.authenticate("local", {
-    successRedirect: "/user/dashboard",
+    successRedirect: "/",
     failureRedirect: "/login",
   })
 );
@@ -32,19 +28,17 @@ router.post("/daftar/submit", async (req, res) => {
     }
 
     // Hash the password before saving it
-    // const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create a new admin user
     const newUser = new User({
       email,
-      // password: hashedPassword, // Store the hashed password in the database
-      password,
+      password: hashedPassword, // Store the hashed password in the database
     });
 
     // Save the new user to the database
     await newUser.save();
-    //res.redirect("/daftar");
-    res.status(201).json({ msg: "Admin account created successfully" });
+    res.redirect("/login");
   } catch (error) {
     console.error("Error creating admin account:", error);
     res.status(500).json({ msg: "Error creating admin account" });
