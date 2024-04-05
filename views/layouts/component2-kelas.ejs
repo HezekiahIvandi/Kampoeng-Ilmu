@@ -2,9 +2,20 @@
   <div class="navbar mb-20 w-full">
     <div class="navbar-start"></div>
     <div class="navbar-center">
-      <div role="tablist" class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge" id="tablist">
-        <a role="tab" class="tab [--tab-bg:yellow] [--tab-border-color:orange]" data-tab="android">Android</a>
-        <a role="tab" class="tab" data-tab="machine-learning">Machine Learning</a>
+      <div
+        role="tablist"
+        class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge"
+        id="tablist"
+      >
+        <a
+          role="tab"
+          class="tab [--tab-bg:yellow] [--tab-border-color:orange]"
+          data-tab="android"
+          >Android</a
+        >
+        <a role="tab" class="tab" data-tab="machine-learning"
+          >Machine Learning</a
+        >
         <a role="tab" class="tab" data-tab="data-scientist">Data Scientist</a>
         <a role="tab" class="tab" data-tab="frontend-web">Front-End Web</a>
         <a role="tab" class="tab" data-tab="backend">Back-End</a>
@@ -19,9 +30,10 @@
 
   <div class="mb-28">
     <!-- start CARDS -->
-    <div class="card-container grid grid-cols-3 gap-4 mt-10 mx-40">
-      <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %><%- include('card.ejs') %> <%- include('card.ejs') %> <%-
-      include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %>
+    <div class="card-container grid grid-cols-3 gap-4 mt-10 mx-20">
+      <% cardsInfo.forEach(cardInfo => { %> <%- include('card.ejs', { imageUrl:
+      cardInfo.imageUrl, langkah: cardInfo.langkah, title: cardInfo.title, pfp:
+      cardInfo.pfp, name: cardInfo.name, job: cardInfo.job }) %> <% }); %>
     </div>
     <!-- end of CARDS -->
   </div>

@@ -3,12 +3,20 @@
 <div class="bg-[var(--tw-font)] relative" id="kelas">
   <div class="navbar bg-[var(--tw-font)]">
     <div class="navbar-start ml-20">
-      <p class="text-4xl font-bold text-[var(--tw-white)]"><span class="text-[var(--tw-button)]">KELAS</span> POPULER</p>
+      <p class="text-4xl font-bold text-[var(--tw-white)]">
+        <span class="text-[var(--tw-button)]">KELAS</span> POPULER
+      </p>
     </div>
     <div class="navbar-end mr-40">
-      <div role="tablist" class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge" id="tablist">
+      <div
+        role="tablist"
+        class="tabs tabs-boxed px-5 py-4 w-auto rounded-badge"
+        id="tablist"
+      >
         <a role="tab" class="tab" data-tab="android">Android</a>
-        <a role="tab" class="tab" data-tab="machine-learning">Machine Learning</a>
+        <a role="tab" class="tab" data-tab="machine-learning"
+          >Machine Learning</a
+        >
         <a role="tab" class="tab" data-tab="data-scientist">Data Scientist</a>
         <a role="tab" class="tab" data-tab="frontend-web">Front-End Web</a>
         <a role="tab" class="tab" data-tab="backend">Back-End</a>
@@ -17,16 +25,49 @@
   </div>
 
   <!-- start CARDS -->
-  <div class="card-container grid grid-cols-3 gap-4 mt-10 mx-40"><%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %> <%- include('card.ejs') %></div>
-  <!-- end of CARDS -->
-  <div class="flex justify-center items-center mt-10">
-    <div class="btn bg-[var(--tw-button)] text-[var(--tw-font)] hover:bg-[var(--tw-font)] hover:text-[var(--tw-button)] rounded-badge h-[50px] w-[200px]"><a href="/kelas-belajar">Jelajahi lebih lanjut</a></div>
-  </div>
+  <div class="card-container grid grid-cols-3 gap-[1rem] mt-10 mx-20">
+    <% cardsInfo.forEach(cardInfo => { %> <%- include('card.ejs', { imageUrl:
+    cardInfo.imageUrl, langkah: cardInfo.langkah, title: cardInfo.title, pfp:
+    cardInfo.pfp, name: cardInfo.name, job: cardInfo.job }) %> <% }); %>
 
-  <img src="/assets/dot1.png" alt="" class="absolute bottom-12 left-8 w-2 h-auto" />
-  <img src="/assets/Star3.png" alt="" class="absolute bottom-0 left-80 w-10 h-auto" />
-  <img src="/assets/dot1.png" alt="" class="absolute bottom-6 left-[510px] w-4 h-auto" />
-  <img src="/assets/dot1.png" alt="" class="absolute bottom-[-15px] left-[1020px] w-4 h-auto" />
-  <img src="/assets/Ellipse1.png" alt="" class="absolute bottom-[-37px] left-[1210px] w-16 h-auto" />
-  <img src="/assets/dot1.png" alt="" class="absolute bottom-[180px] left-[1450px] w-2 h-auto" />
+    <!-- end of CARDS -->
+    <div class="flex justify-center items-center mt-10">
+      <div
+        class="btn bg-[var(--tw-button)] text-[var(--tw-font)] hover:bg-[var(--tw-font)] hover:text-[var(--tw-button)] rounded-badge h-[50px] w-[200px]"
+      >
+        <a href="/kelas-belajar">Jelajahi lebih lanjut</a>
+      </div>
+    </div>
+
+    <img
+      src="/assets/dot1.png"
+      alt=""
+      class="absolute bottom-12 left-8 w-2 h-auto"
+    />
+    <img
+      src="/assets/Star3.png"
+      alt=""
+      class="absolute bottom-0 left-80 w-10 h-auto"
+    />
+    <img
+      src="/assets/dot1.png"
+      alt=""
+      class="absolute bottom-6 left-[510px] w-4 h-auto"
+    />
+    <img
+      src="/assets/dot1.png"
+      alt=""
+      class="absolute bottom-[-15px] left-[1020px] w-4 h-auto"
+    />
+    <img
+      src="/assets/Ellipse1.png"
+      alt=""
+      class="absolute bottom-[-37px] left-[1210px] w-16 h-auto"
+    />
+    <img
+      src="/assets/dot1.png"
+      alt=""
+      class="absolute bottom-[180px] left-[1450px] w-2 h-auto"
+    />
+  </div>
 </div>
