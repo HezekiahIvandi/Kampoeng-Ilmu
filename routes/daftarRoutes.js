@@ -24,6 +24,7 @@ router.post("/daftar/submit", async (req, res) => {
   try {
     const { email, password } = req.body;
     console.log(req.body);
+    console.log(email + password);
     // Check if the username is already taken
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -31,12 +32,13 @@ router.post("/daftar/submit", async (req, res) => {
     }
 
     // Hash the password before saving it
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create a new admin user
     const newUser = new User({
       email,
-      password: hashedPassword, // Store the hashed password in the database
+      // password: hashedPassword, // Store the hashed password in the database
+      password,
     });
 
     // Save the new user to the database
