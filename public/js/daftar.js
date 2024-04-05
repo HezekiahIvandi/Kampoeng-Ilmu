@@ -57,7 +57,7 @@ daftarForm.addEventListener("submit", async function (event) {
   } else {
     Swal.fire({
       title: "Error!",
-      text: "Kontak dengan user ini sudah ada!",
+      text: "User dengan email ini sudah ada!",
       icon: "error",
       confirmButtonText: "OK",
     });
