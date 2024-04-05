@@ -12,6 +12,7 @@ const daftarRoutes = require("./routes/daftarRoutes");
 const kelasRoutes = require("./routes/kelasRoutes");
 const alurRoutes = require("./routes/alurRoutes");
 const tentangRoutes = require("./routes/tentangRoutes");
+const loginRoutes = require("./routes/loginRoutes");
 const port = 3000;
 
 app.use(
@@ -41,6 +42,7 @@ app.use(daftarRoutes);
 app.use(kelasRoutes);
 app.use(alurRoutes);
 app.use(tentangRoutes);
+app.use(loginRoutes);
 
 //Memulai server
 app.listen(port, () => {
