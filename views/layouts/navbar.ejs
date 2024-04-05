@@ -38,11 +38,14 @@
         />
       </label>
 
+      <% if (!isLoggedIn) { %>
       <a
         href="/daftar"
         class="btn w-[180px] h-[20px] p-0 ml-4 mr-5 rounded-badge bg-[var(--tw-button)] text-[var(--tw-font)] hover:bg-[var(--tw-font)] hover:text-[var(--tw-button)] hover:border-[var(--tw-white)]"
-        >Masuk sekarang</a
       >
+        Masuk sekarang
+      </a>
+      <% } %>
     </div>
   </div>
 </div>

@@ -6,6 +6,7 @@ router.get("/", (req, res) => {
     title: "Home",
     layout: "mainLayout.ejs",
     cardsInfo: berandaCardsInfo,
+    isLoggedIn: req.isAuthenticated(),
   });
 });
 

@@ -5,6 +5,7 @@ router.get("/tentang-kami", (req, res) => {
   res.render("tentang.ejs", {
     title: "Tentang-Kami",
     layout: "mainLayout.ejs",
+    isLoggedIn: req.isAuthenticated(),
   });
 });
 

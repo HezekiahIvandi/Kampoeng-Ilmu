@@ -5,6 +5,8 @@ router.get("/alur-belajar", (req, res) => {
   res.render("alur.ejs", {
     title: "Alur-Belajar",
     layout: "mainLayout.ejs",
+
+    isLoggedIn: req.isAuthenticated(),
   });
 });
 

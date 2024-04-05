@@ -23,3 +23,43 @@ passwordInput.addEventListener("blur", function () {
   // Hide the password strength message when input loses focus
   passwordStrengthMessage.style.display = "none";
 });
+
+daftarForm.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(this);
+  const jsonData = {};
+  for (const [key, value] of formData.entries()) {
+    jsonData[key] = value;
+  }
+
+  const response = await fetch("/daftar/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonData),
+  });
+
+  const responseData = await response.json();
+  if (response.ok) {
+    // Tampilkan pesan sukses jika request berhasil dengan jeda waktu
+    Swal.fire({
+      title: "Success!",
+      text: "Akun berhasil didaftar",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then(() => {
+      // Setelah jeda waktu selesai, reset form
+      this.reset();
+      window.location.href = "/login";
+    });
+  } else {
+    Swal.fire({
+      title: "Error!",
+      text: "Kontak dengan user ini sudah ada!",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+  }
+});

@@ -7,6 +7,8 @@ router.get("/kelas-belajar", (req, res) => {
     title: "Kelas Belajar",
     layout: "mainLayout.ejs",
     cardsInfo: ruangKelasCardsInfo,
+
+    isLoggedIn: req.isAuthenticated(),
   });
 });
 

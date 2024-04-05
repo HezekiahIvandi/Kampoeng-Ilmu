@@ -3,11 +3,6 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const User = require("../models/user");
-
-router.get("/user/dashboard", (req, res) => {
-  res.send("login succesfull!");
-});
-
 router.post(
   "/login/submit",
   passport.authenticate("local", {
@@ -24,7 +19,7 @@ router.post("/daftar/submit", async (req, res) => {
     // Check if the username is already taken
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ msg: "Email already exists" });
+      return res.status(500).json({ msg: "Email already exists" });
     }
 
     // Hash the password before saving it
@@ -37,8 +32,10 @@ router.post("/daftar/submit", async (req, res) => {
     });
 
     // Save the new user to the database
-    await newUser.save();
-    res.redirect("/login");
+    await newUser.save().then(() => {
+      res.status(201).json({ msg: "Success" });
+    });
+    //res.redirect("/login");
   } catch (error) {
     console.error("Error creating admin account:", error);
     res.status(500).json({ msg: "Error creating admin account" });
@@ -49,6 +46,8 @@ router.get("/daftar", (req, res) => {
   res.render("daftar.ejs", {
     title: "Daftar",
     layout: "mainLayout.ejs",
+
+    isLoggedIn: req.isAuthenticated(),
   });
 });
 module.exports = router;
