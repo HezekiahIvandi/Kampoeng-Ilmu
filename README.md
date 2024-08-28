@@ -1,8 +1,37 @@
 # Kampoeng-Ilmu
-Kampoeng Ilmu: Kampoeng Ilmu adalah aplikasi web full-stack yang bertujuan untuk memberikan akses kepada masyarakat untuk belajar berbagai keterampilan teknologi informasi, terutama dalam bidang pemrograman komputer. Platform ini memungkinkan pengguna untuk belajar keterampilan pemrograman dan teknologi melalui kursus interaktif, tutorial, dan proyek.
+Kampoeng Ilmu is a full-stack web application designed to provide the community with access to learn various information technology skills, particularly in computer programming. This platform enables users to acquire programming and technology skills through interactive courses, tutorials, and projects.
 
-Tech Stack: Backend: Node.js, Express.js Database: MongoDB, Mongoose ODM Frontend: HTML, CSS (dengan Tailwind CSS), JavaScript (dengan template EJS) Autentikasi: Passport.js (dengan strategi Local) Manajemen Sesi: Express-session Enkripsi Sandi: bcrypt Manajemen Dependensi: npm Alat Pengembangan: Nodemon (untuk reload otomatis server), Tailwind CSS (untuk styling)
+## Tech Stack
+- Backend: Node.js, Express.js
+- Database: MongoDB, Mongoose ODM
+- Frontend: HTML, CSS (with Tailwind CSS), JavaScript (with EJS template engine)
+- Authentication: Passport.js (with Local strategy)
+- Session Management: Express-session
+- Password Encryption: bcrypt
+- Dependency Management: npm
+- Development Tools:
+- Nodemon: For automatic server reload during development
+- Tailwind CSS: For efficient styling
 
-Instalasi: Clone repositori: git clone https://github.com/HezekiahIvandi/Kampoeng-Ilmu Instal dependensi: npm install Mulai server: npm start Buka web browser Anda dan kunjungi http://localhost:3000 untuk mengakses aplikasi.
+**Installation**
+```
+git clone https://github.com/HezekiahIvandi/Kampoeng-Ilmu
+cd Kampoeng-Ilmu
+```
 
-Penulis Marchella Angeline 535220001 Jessen Cahyadi 535220023 Hezekiah Ivandi 535220039
+**Install dependencies:**
+```
+npm install
+```
+
+**Start the server:**
+```
+npm start
+```
+
+Access the application: Open your web browser and visit http://localhost:3000 to access the application.
+
+## Authors
+- Marchella Angeline - 535220001
+- Jessen Cahyadi - 535220023
+- Hezekiah Ivandi - 535220039
